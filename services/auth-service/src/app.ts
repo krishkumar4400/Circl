@@ -6,4 +6,11 @@ app.get('/', (req: Request,res:Response) => {
     res.send("Hello Circl");
 });
 
+app.get('/health', (req: Request,res: Response) => {
+    res.status(200).json({
+        message: "Don't worry, I am healthy",
+        success: true
+    }); 
+});
+
 export default app;
